@@ -74,7 +74,7 @@ put_board("intro")
 
 ### Classical Variation (4...Bc5) {.unnumbered}
 
-#### 5.Nxc6
+#### 5.Nxc6 {.unnumbered}
 ::::{.columns}
 
 :::{.column width='40%'}
@@ -91,9 +91,8 @@ put_board("classical-1")
 
 ::::
 
-<br>
-<br>
 
+#### 5.Be3 {.unnumbered}
 ::::{.columns}
 
 :::{.column width='40%'}
@@ -111,8 +110,8 @@ put_board("classical-2")
 ::::
 
 
-<br>
-<br>
+
+#### 5.Nb3 {.unnumbered}
 
 ::::{.columns}
 
@@ -130,7 +129,7 @@ put_board("classical-3")
 ::::
 
 
-### Steinitz Variation (4...Qh4!?)
+### Steinitz Variation (4...Qh4!?) {.unnumbered}
 ::::{.columns}
 
 :::{.column width='40%'}

@@ -13,8 +13,6 @@ book:
         - fried-liver.qmd
   appendices:
     - references.qmd
-  resources:
-    - "images/chesspieces/wikipedia/*.png"
 
 bibliography: references.bib
 

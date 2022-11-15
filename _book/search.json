@@ -4,35 +4,7 @@
     "href": "index.html",
     "title": "Chess Notes",
     "section": "",
-    "text": "These are my notes on various topics in chess, aggregated from a variety of sources.\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books."
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "scotch.html",
-    "href": "scotch.html",
-    "title": "2  The Scotch",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\nscotch = [\n  {title: \"intro\", moves: ['e2-e4', 'e7-e5', 'g1-f3', 'b8-c6', 'd2-d4']},\n  {title: \"classical\", moves: ['c6-d4', 'f1-c5']}\n]\n\n\n\n\n\n\n\npositions = [\n  {name: 'start', fen: 'start'},\n  {name: 'intro', fen: 'r1bqkbnr/pppp1ppp/2n5/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R'}\n]\n\n\n\n\n\n\n\nboard_setup = function(data, title, pos) {\n\n  var board = Chessboard('myBoard-' + title)\n  \n  const position = positions.find(d => d.name === pos).fen\n  board.position(position, false)\n  \n  const moves = data.find(d => d.title === title).moves\n  var pos = -1 \n  \n  $('#next-' + title).on('click', function () {\n    if (pos <= moves.length) {\n      pos = pos + 1\n      board.move(moves[pos])\n    }\n  })\n  \n  $('#prev-' + title).on('click', function () {\n    if (pos >= 0) {\n      var move_rev = moves[pos]\n      move_rev = move_rev.substring(3, 5) + '-' + move_rev.substring(0, 2)\n      board.move(move_rev)\n      \n      pos = pos - 1\n    }\n  })\n  \n  $('#reset-' + title).on('click', function() {\n    pos = -1\n    board.position(position)\n  })\n  \n}\n\n\n\n\n\n\n\nboard_setup(scotch, \"intro\", \"start\")\n\n\n\n\n\n\n\n\n\n\n\n\n<\n\n\nReset\n\n\n>\n\n\n\nboard_setup(scotch, \"classical\", \"intro\")\n\n\n\n\n\n\n\n\n\n\n\n\n<\n\n\nReset\n\n\n>"
+    "text": "Preface\nThese are my notes on various topics in chess, aggregated from a variety of sources.\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books."
   },
   {
     "objectID": "scotch.html#introduction",
@@ -42,25 +14,11 @@
     "text": "1.1 Introduction"
   },
   {
-    "objectID": "scotch.html#classical-variation",
-    "href": "scotch.html#classical-variation",
-    "title": "2  The Scotch",
-    "section": "2.2 Classical Variation",
-    "text": "2.2 Classical Variation\n\nboard_setup(scotch, \"classical-1\", \"intro\")\n\n\n\n\n\n\n\n\n\n\n\n\n<\n\n\nReset\n\n\n>"
-  },
-  {
     "objectID": "scotch.html#main-line-4.nxd4",
     "href": "scotch.html#main-line-4.nxd4",
     "title": "1  The Scotch",
     "section": "1.2 Main Line (4.Nxd4)",
-    "text": "1.2 Main Line (4.Nxd4)\n\nClassical Variation (4…Bc5)\n\n1.2.0.1 5.Nxc6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText goes here!\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText goes here!\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText goes here\n\n\n\n\n\n\n1.2.1 Steinitz Variation (4…Qh4!?)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack wins a pawn here but gives white a lead in development and ends up with their king in a slightly awkward spot."
-  },
-  {
-    "objectID": "openings.html",
-    "href": "openings.html",
-    "title": "Openings",
-    "section": "",
-    "text": "test"
+    "text": "1.2 Main Line (4.Nxd4)\n\nClassical Variation (4…Bc5)\n\n5.Nxc6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText goes here!\n\n\n\n\n\n5.Be3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText goes here!\n\n\n\n\n\n5.Nb3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nText goes here\n\n\n\n\n\n\nSteinitz Variation (4…Qh4!?)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack wins a pawn here but gives white a lead in development and ends up with their king in a slightly awkward spot."
   },
   {
     "objectID": "fried-liver.html#introduction",
