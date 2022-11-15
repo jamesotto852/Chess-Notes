@@ -1,0 +1,32 @@
+project:
+  type: book
+
+book:
+  title: "Chess Notes"
+  author: "James Otto"
+  date: "11/15/2022"
+  chapters:
+    - index.qmd
+    - part: openings.qmd
+      chapters:
+        - scotch.qmd
+        - fried-liver.qmd
+  appendices:
+    - references.qmd
+  resources:
+    - "images/chesspieces/wikipedia/*.png"
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: "css/styles.css"
+  pdf:
+    documentclass: scrreprt
+
+execute:
+  echo: false
+  output: false
+
+

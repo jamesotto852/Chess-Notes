@@ -1,0 +1,6 @@
+# Preface {.unnumbered}
+
+These are my notes on various topics in chess, aggregated from a variety of sources.
+
+This is a Quarto book.
+To learn more about Quarto books visit <https://quarto.org/docs/books>.

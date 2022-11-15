@@ -1,0 +1,147 @@
+<link rel="stylesheet" href="/scripts/chessboard/css/chessboard-1.0.0.css">
+      
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+<script src="/scripts/chessboard/js/chessboard-1.0.0.js"></script>
+
+# The Scotch
+
+```{r, file='scripts/R/r-setup.R'}
+```
+
+```{ojs, file='scripts/js/board-setup.js'}
+```
+
+```{r}
+scotch <-
+  add_game(
+    title = "intro",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4"),
+    notation = TRUE
+  ) |>
+  add_game(
+    title = "classical-1",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
+              "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3"),
+    start = 7
+  ) |>
+  add_game(
+    title = "classical-2",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
+              "Be3", "Qf6", "c3", "Nge7", "Bc4", "0-0", "0-0", "Bb6"),
+    start = 7
+  ) |>
+  add_game(
+    title = "classical-3",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
+              "Nb3", "Bb6", "a4", "a6", "Nc3"),
+    start = 7
+  ) |>
+  add_game(
+    title = "Steinitz",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
+              "Qh4", "Nc3", "Bb4", "Be2", "Qxe4", "Nb5", "Bxc3+", "bxc3", "Kd8", "0-0"),
+    start = 7
+  ) |>
+  # add_game(
+  #   title = "Endgame",
+  #   moves = c("Ka3"),
+  #   position = "8/1k6/8/8/8/3Q4/K7/8 w - - 0 1"
+  # ) |>
+  clean_chess_df()
+
+ojs_define(scotch_t = scotch)
+```
+
+```{ojs}
+scotch = transpose(scotch_t)
+```
+
+```{ojs}
+scotch.map(d => board_setup(scotch, d.title))
+```
+
+## Introduction
+
+```{r}
+#| output: asis
+put_board("intro")
+```
+
+## Main Line (4.Nxd4)
+
+### Classical Variation (4...Bc5) {.unnumbered}
+
+#### 5.Nxc6
+::::{.columns}
+
+:::{.column width='40%'}
+```{r}
+#| output: asis
+put_board("classical-1")
+```
+:::
+
+
+:::{.column width='60%'}
+* Text goes here!
+:::
+
+::::
+
+<br>
+<br>
+
+::::{.columns}
+
+:::{.column width='40%'}
+```{r}
+#| output: asis
+put_board("classical-2")
+```
+:::
+
+
+:::{.column width='60%'}
+* Text goes here!
+:::
+
+::::
+
+
+<br>
+<br>
+
+::::{.columns}
+
+:::{.column width='40%'}
+```{r}
+#| output: asis
+put_board("classical-3")
+```
+:::
+
+:::{.column width='60%'}
+* Text goes here
+:::
+
+::::
+
+
+### Steinitz Variation (4...Qh4!?)
+::::{.columns}
+
+:::{.column width='40%'}
+```{r}
+#| output: asis
+put_board("Steinitz")
+```
+:::
+
+:::{.column width='60%'}
+* Black wins a pawn here but gives white a lead in development and ends up with their king in a slightly awkward spot.
+:::
+
+::::
