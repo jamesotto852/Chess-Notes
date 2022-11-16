@@ -30,17 +30,20 @@ scotch <-
   add_variation(
     title = "classical-1",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
-              "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3")
+              "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3"),
+    start = 9
   ) |>
   add_variation(
     title = "classical-2",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
-              "Be3", "Qf6", "c3", "Nge7", "Bc4", "0-0", "0-0", "Bb6")
+              "Be3", "Qf6", "c3", "Nge7", "Bc4", "0-0", "0-0", "Bb6"),
+    start = 9
   ) |>
   add_variation(
     title = "classical-3",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
-              "Nb3", "Bb6", "a4", "a6", "Nc3")
+              "Nb3", "Bb6", "a4", "a6", "Nc3"),
+    start = 9
   ) |>
   add_game(
     title = "Schmidt",
@@ -52,11 +55,13 @@ scotch <-
     title = "four-knights",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6",
               "Nc3", "Bb4", "Nxc6", "bxc6", "Bd3", "d5", "exd5", "cxd5", "0-0", "0-0", "Bg5", "c6"),
+    start = 9
   )  |>
   add_variation(
     title = "Mieses",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6",
               "Nxc6", "bxc6", "e5", "Qe7", "Qe2", "Nd5", "c4"),
+    start = 9
   ) |>
   add_game(
     title = "Steinitz",
@@ -74,19 +79,19 @@ scotch <-
     title = "scotch-gambit-variation-italian",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
               "Bc5", "c3", "Nf6"),
-    start = 7 
+    start = 8 
   ) |>
   add_variation(
     title = "scotch-gambit-variation-accepted",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
               "Bc5", "c3", "dxc3", "Bxf7+", "Kxf7", "Qd5+"),
-    start = 7 
+    start = 8 
   ) |>
   add_variation(
     title = "scotch-gambit-variation-london",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
               "Bb4+"),
-    start = 7
+    start = 8
   ) |>
   ## TRAPS
   add_game(
@@ -98,12 +103,14 @@ scotch <-
   add_variation(
     title = "traps-classical-1",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
-              "Bc5", "Be3", "Nf6", "Nxc6", "dxc6", "Qxd8+", "Kxd8", "Bxc5", "Nxe4")
+              "Bc5", "Be3", "Nf6", "Nxc6", "dxc6", "Qxd8+", "Kxd8", "Bxc5", "Nxe4"),
+    start = 9
   ) |>
   add_variation(
     title = "traps-classical-2",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
-              "Bc5", "Be3", "d6", "Nxc6", "bxc6", "Bxc5", "dxc5", "Qxd8+", "Kxd8")
+              "Bc5", "Be3", "d6", "Nxc6", "bxc6", "Bxc5", "dxc5", "Qxd8+", "Kxd8"),
+    start = 9
   ) |>
   # add_game(
   #   title = "Endgame",

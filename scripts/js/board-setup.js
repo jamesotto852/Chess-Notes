@@ -5,7 +5,6 @@ board_setup = function(data, title) {
   // if there's just one variation, need to put in array
   var variations = game.variations
 
-
   var pos = game.start - 1
   var moved = false
 
@@ -150,9 +149,9 @@ board_setup = function(data, title) {
 
           game = data.find(d => d.title === variations[k])
 
-          // Don't reset position if at start of game
+          // Don't reset position if before start
           // (this allows for the complete viewing of variations)
-          if (!(pos === 0)) {
+          if (pos >= game.start) {
             pos = game.start - 1
           }
 
