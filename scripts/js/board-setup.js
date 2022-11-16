@@ -73,7 +73,13 @@ board_setup = function(data, title) {
 
       }
 
-      pos = game.start - 1
+      // if reset button is pressed at starting position, totally reset board
+      if (pos === game.start - 1) {
+        pos = 0
+      } else {
+        pos = game.start - 1
+      }
+
 
     } else {
 
@@ -127,7 +133,12 @@ board_setup = function(data, title) {
             .style("color", null)
 
           game = data.find(d => d.title === title)
-          pos = game.start - 1
+
+          // Don't reset position if before start of game
+          if (pos >= game.start) {
+            pos = game.start - 1
+          }
+
           board.position(game.positions[pos])
 
           d3.select('#reset-' + title)
@@ -138,7 +149,13 @@ board_setup = function(data, title) {
         } else {
 
           game = data.find(d => d.title === variations[k])
-          pos = game.start - 1
+
+          // Don't reset position if at start of game
+          // (this allows for the complete viewing of variations)
+          if (!(pos === 0)) {
+            pos = game.start - 1
+          }
+
           board.position(game.positions[pos])
 
           d3.select('#reset-' + title)
