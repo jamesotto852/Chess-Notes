@@ -18,3 +18,7 @@
   box-shadow: inset 10vw 0 0 0 #2780e3;
   color: white;
 }
+
+.btn {
+  width: 2.5em;
+}
