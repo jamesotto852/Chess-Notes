@@ -25,14 +25,14 @@
     "href": "scotch.html#scotch-gambit-4.bc4",
     "title": "1  The Scotch",
     "section": "1.3 Scotch Gambit (4.Bc4)",
-    "text": "1.3 Scotch Gambit (4.Bc4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack can accept with  4…Bc5 5.c3 dxc3 .\nAlternatively,  5…Nf6  transitions into the Italian Game\n 4…Bb4+  is the London Defense"
+    "text": "1.3 Scotch Gambit (4.Bc4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack can accept with  4…Bc5 5.c3 dxc3 .\n\nAlternatively,  5…Nf6  transitions into the Italian Game\n\n 4…Bb4+  is the London Defense"
   },
   {
     "objectID": "scotch.html#traps",
     "href": "scotch.html#traps",
     "title": "1  The Scotch",
     "section": "1.4 Traps",
-    "text": "1.4 Traps\n\nClassical Variation (4.Nxd4 Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf black doesn’t defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!\n\nFor example,  5….Nf6  loses the bishop\n 5….d6  defends the bishop, but it’s not pretty\n\n\n\n\ntodo: - 3…d6 - Göring Gambit"
+    "text": "1.4 Traps\n\nClassical Variation (4.Nxd4 Bc5 5.Be3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf black doesn’t defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!\n\nFor example,  5….Nf6  loses the bishop\n 5….d6  defends the bishop, but it’s not pretty"
   },
   {
     "objectID": "fried-liver.html#introduction",
