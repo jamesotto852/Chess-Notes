@@ -79,13 +79,13 @@ scotch <-
     title = "scotch-gambit-variation-italian",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
               "Bc5", "c3", "Nf6"),
-    start = 8 
+    start = 8
   ) |>
   add_variation(
     title = "scotch-gambit-variation-accepted",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
               "Bc5", "c3", "dxc3", "Bxf7+", "Kxf7", "Qd5+"),
-    start = 8 
+    start = 8
   ) |>
   add_variation(
     title = "scotch-gambit-variation-london",
@@ -96,21 +96,21 @@ scotch <-
   ## TRAPS
   add_game(
     title = "traps-classical",
-    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4"),
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3"),
     start = 7,
     variations = c("traps-classical-1", "traps-classical-2")
   ) |>
   add_variation(
     title = "traps-classical-1",
-    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
-              "Bc5", "Be3", "Nf6", "Nxc6", "dxc6", "Qxd8+", "Kxd8", "Bxc5", "Nxe4"),
-    start = 9
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3",
+              "Nf6", "Nxc6", "dxc6", "Qxd8+", "Kxd8", "Bxc5", "Nxe4"),
+    start = 10
   ) |>
   add_variation(
     title = "traps-classical-2",
-    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
-              "Bc5", "Be3", "d6", "Nxc6", "bxc6", "Bxc5", "dxc5", "Qxd8+", "Kxd8"),
-    start = 9
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3",
+              "d6", "Nxc6", "bxc6", "Bxc5", "dxc5", "Qxd8+", "Kxd8"),
+    start = 10
   ) |>
   # add_game(
   #   title = "Endgame",
@@ -212,7 +212,7 @@ put_board("scotch-gambit")
 
 :::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
 * Black can accept with <span class="variation" id = "scotch-gambit-variation-accepted"> 4...Bc5 5.c3 dxc3 </span>.
-* Alternatively, <span class="variation" id="scotch-gambit-variation-italian">  5...Nf6 </span> transitions into the Italian Game
+  * Alternatively, <span class="variation" id="scotch-gambit-variation-italian">  5...Nf6 </span> transitions into the Italian Game
 * <span class="variation" id = "scotch-gambit-variation-london"> 4...Bb4+ </span> is the London Defense 
 :::
 
@@ -221,7 +221,7 @@ put_board("scotch-gambit")
 
 ## Traps
 
-### Classical Variation (4.Nxd4 Bc5) {.unnumbered}
+### Classical Variation (4.Nxd4 Bc5 5.Be3) {.unnumbered}
 ::::{.columns}
 
 :::{.column width='45%'}

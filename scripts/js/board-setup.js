@@ -57,7 +57,6 @@ board_setup = function(data, title) {
     if (!moved) {
 
       // if looking at a variation, reset to main line
-      // (otherwise, just reset current line)
       if (!(variations === undefined) && variations.includes(game.title)) {
 
         d3.select('#' + game.title)
@@ -66,18 +65,24 @@ board_setup = function(data, title) {
 
         game = data.find(d => d.title === title)
 
+        pos = game.start - 1
+
         d3.select('#reset-' + title)
           .classed('btn-primary', false)
           .classed('btn-outline-secondary', true)
 
+      // Otherwise, reset main line (possibly to start of game)
+      } else {
+
+        // if reset button is pressed at starting position, totally reset board
+        if (pos === game.start - 1) {
+          pos = 0
+        } else {
+          pos = game.start - 1
+        }
+
       }
 
-      // if reset button is pressed at starting position, totally reset board
-      if (pos === game.start - 1) {
-        pos = 0
-      } else {
-        pos = game.start - 1
-      }
 
 
     } else {
