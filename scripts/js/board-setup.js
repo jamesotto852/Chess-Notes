@@ -56,6 +56,11 @@ board_setup = function(data, title) {
 
       // if looking at a variation, reset to main line
       if (!(variations === undefined) && variations.includes(game.title)) {
+
+        d3.select('#' + game.title)
+          .style("box-shadow", "inset 0 0 0 0 #2780e3")
+          .style("color", "#2780e3")
+
         game = data.find(d => d.title === title)
 
         d3.select('#reset-' + title)
@@ -85,10 +90,6 @@ board_setup = function(data, title) {
   })
 
 
-  // support for variations:
-
-
-
   if (!(variations === undefined)) {
 
     if (!(Array.isArray(variations))) {
@@ -109,6 +110,18 @@ board_setup = function(data, title) {
           .classed('btn-outline-secondary', false)
           .classed('btn-success', false)
           .classed('btn-primary', true)
+
+        // need to unselect other variations
+        variations.filter(name => !(name === variations[k]))
+          .map(name =>  {
+            d3.select('#' + name)
+              .style("box-shadow", "inset 0 0 0 0 #2780e3")
+              .style("color", "#2780e3")
+          })
+
+        d3.select('#' + variations[k])
+          .style("box-shadow", "inset 10vw 0 0 0 #2780e3")
+          .style("color", "white")
       })
     }
 
