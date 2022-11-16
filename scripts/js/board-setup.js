@@ -55,7 +55,7 @@ board_setup = function(data, title) {
     if (!moved) {
 
       // if looking at a variation, reset to main line
-      if (variations.includes(game.title)) {
+      if (!(variations === undefined) && variations.includes(game.title)) {
         game = data.find(d => d.title === title)
 
         d3.select('#reset-' + title)
