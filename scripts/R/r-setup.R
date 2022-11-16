@@ -91,6 +91,9 @@ glue('
 <button id="next-{title}" class="btn btn-outline-secondary">
 <i class="fa-solid fa-arrow-right"></i>
 </button>
+<button id="flip-{title}" class="btn btn-outline-secondary">
+<i class="fa-solid fa-shuffle"></i>
+</button>
 </div>
 ')
 }

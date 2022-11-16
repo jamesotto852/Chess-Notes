@@ -236,7 +236,9 @@ put_board("traps-classical")
 
 
 
-
+todo:
+  - 3...d6
+  - Göring Gambit
 
 
 

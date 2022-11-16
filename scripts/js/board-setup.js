@@ -58,21 +58,39 @@ board_setup = function(data, title) {
     if (!moved) {
 
       // if looking at a variation, reset to main line
+      // (otherwise, just reset current line)
       if (!(variations === undefined) && variations.includes(game.title)) {
 
         d3.select('#' + game.title)
-          .style("box-shadow", "inset 0 0 0 0 #2780e3")
-          .style("color", "#2780e3")
+          .style("box-shadow", null)
+          .style("color", null)
 
         game = data.find(d => d.title === title)
 
         d3.select('#reset-' + title)
           .classed('btn-primary', false)
           .classed('btn-outline-secondary', true)
+
       }
 
       pos = game.start - 1
 
+    } else {
+
+      // color reset button correctly if pieces are moved:
+      if (!(variations === undefined) && variations.includes(game.title)) {
+
+        d3.select('#reset-' + title)
+          .classed('btn-primary', true)
+          .classed('btn-success', false)
+
+      } else {
+
+        d3.select('#reset-' + title)
+          .classed('btn-outline-secondary', true)
+          .classed('btn-success', false)
+
+      }
     }
 
     board.position(game.positions[pos])
@@ -81,16 +99,15 @@ board_setup = function(data, title) {
     d3.select('#prev-' + title).property("disabled", pos == 0)
     d3.select('#next-' + title).property("disabled", pos == game.positions.length - 1)
 
-    d3.select('#reset-' + title)
-      //.classed('btn-outline-secondary', true)
-      .classed('btn-success', false)
-
     moved = false
+
   })
 
   $('#analyze-' + title).on('click', function() {
     window.open(game.link[pos], '_blank');
   })
+
+  $('#flip-' + title).on('click', board.flip)
 
 
   if (!(variations === undefined)) {
