@@ -1,8 +1,12 @@
 board_setup = function(data, title) {
 
-  const game = data.find(d => d.title === title)
-  var pos = game.start - 1
+  var game = data.find(d => d.title === title)
 
+  // if there's just one variation, need to put in array
+  var variations = game.variations
+
+
+  var pos = game.start - 1
   var moved = false
 
   var onDragMove = function() {
@@ -46,9 +50,21 @@ board_setup = function(data, title) {
   })
 
   $('#reset-' + title).on('click', function() {
-    // if pieces have been moved, reset to previous spot
+
+    // if pieces have not been moved, reset to beginning of line
     if (!moved) {
+
+      // if looking at a variation, reset to main line
+      if (variations.includes(game.title)) {
+        game = data.find(d => d.title === title)
+
+        d3.select('#reset-' + title)
+          .classed('btn-primary', false)
+          .classed('btn-outline-secondary', true)
+      }
+
       pos = game.start - 1
+
     }
 
     board.position(game.positions[pos])
@@ -58,7 +74,7 @@ board_setup = function(data, title) {
     d3.select('#next-' + title).property("disabled", pos == game.positions.length - 1)
 
     d3.select('#reset-' + title)
-      .classed('btn-outline-secondary', true)
+      //.classed('btn-outline-secondary', true)
       .classed('btn-success', false)
 
     moved = false
@@ -67,5 +83,35 @@ board_setup = function(data, title) {
   $('#analyze-' + title).on('click', function() {
     window.open(game.link[pos], '_blank');
   })
+
+
+  // support for variations:
+
+
+
+  if (!(variations === undefined)) {
+
+    if (!(Array.isArray(variations))) {
+      variations = [variations]
+    }
+
+    for (let k = 0; k < variations.length; k++) {
+      $('#' + variations[k]).on('click', function() {
+        game = data.find(d => d.title === variations[k])
+        pos = game.start - 1
+        board.position(game.positions[pos])
+
+        d3.select('#analyze-' + title).property("disabled", false)
+        d3.select('#prev-' + title).property("disabled", pos == 0)
+        d3.select('#next-' + title).property("disabled", pos == game.positions.length - 1)
+
+        d3.select('#reset-' + title)
+          .classed('btn-outline-secondary', false)
+          .classed('btn-success', false)
+          .classed('btn-primary', true)
+      })
+    }
+
+  }
 
 }

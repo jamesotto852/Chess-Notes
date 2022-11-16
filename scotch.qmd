@@ -22,28 +22,53 @@ scotch <-
     notation = TRUE
   ) |>
   add_game(
+    title = "classical",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5"),
+    start = 7,
+    variations = c("classical-1", "classical-2", "classical-3")
+  ) |>
+  add_variation(
     title = "classical-1",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
-              "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3"),
-    start = 7
+              "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3")
+    # start = 10 
   ) |>
-  add_game(
+  add_variation(
     title = "classical-2",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
-              "Be3", "Qf6", "c3", "Nge7", "Bc4", "0-0", "0-0", "Bb6"),
-    start = 7
+              "Be3", "Qf6", "c3", "Nge7", "Bc4", "0-0", "0-0", "Bb6")
+    # start = 10
   ) |>
-  add_game(
+  add_variation(
     title = "classical-3",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
-              "Nb3", "Bb6", "a4", "a6", "Nc3"),
-    start = 7
+              "Nb3", "Bb6", "a4", "a6", "Nc3")
+    # start = 10
   ) |>
   add_game(
     title = "Steinitz",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
               "Qh4", "Nc3", "Bb4", "Be2", "Qxe4", "Nb5", "Bxc3+", "bxc3", "Kd8", "0-0"),
     start = 7
+  ) |>
+  add_game(
+    title = "scotch-gambit",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", 
+              "Bc4", "Bc5", "c3", "Nf6"),
+    variations = c("scotch-gambit-variation-accepted", "scotch-gambit-variation-london"),
+    start = 7
+  ) |>
+  add_variation(
+    title = "scotch-gambit-variation-accepted",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", 
+              "Bc4", "Bc5", "c3", "dxc3", "Bxf7+", "Kxf7", "Qd5+"),
+    start = 10 
+  ) |>
+  add_variation(
+    title = "scotch-gambit-variation-london",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", 
+              "Bc4", "Bb4+"),
+    start = 8
   ) |>
   # add_game(
   #   title = "Endgame",
@@ -60,7 +85,8 @@ scotch = transpose(scotch_t)
 ```
 
 ```{ojs}
-scotch.map(d => board_setup(scotch, d.title))
+scotch.filter(d => d.type === 'main')
+  .map(d => board_setup(scotch, d.title))
 ```
 
 ## Introduction
@@ -74,56 +100,24 @@ put_board("intro")
 
 ### Classical Variation (4...Bc5) {.unnumbered}
 
-#### 5.Nxc6 {.unnumbered}
 ::::{.columns}
 
-:::{.column width='40%'}
+:::{.column width='45%'}
 ```{r}
 #| output: asis
-put_board("classical-1")
+put_board("classical")
 ```
 :::
 
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
 
-:::{.column width='60%'}
-* Text goes here!
-:::
+After 4.Nxd4 Bc5 there are three main lines: 
+<ul>
+<li id = "classical-1"> 5.Nxc6 </li>
+<li id = "classical-2"> 5.Be3 </li>
+<li id = "classical-3"> 5.Nb3 </li>
+</ul>
 
-::::
-
-
-#### 5.Be3 {.unnumbered}
-::::{.columns}
-
-:::{.column width='40%'}
-```{r}
-#| output: asis
-put_board("classical-2")
-```
-:::
-
-
-:::{.column width='60%'}
-* Text goes here!
-:::
-
-::::
-
-
-
-#### 5.Nb3 {.unnumbered}
-
-::::{.columns}
-
-:::{.column width='40%'}
-```{r}
-#| output: asis
-put_board("classical-3")
-```
-:::
-
-:::{.column width='60%'}
-* Text goes here
 :::
 
 ::::
@@ -132,15 +126,35 @@ put_board("classical-3")
 ### Steinitz Variation (4...Qh4!?) {.unnumbered}
 ::::{.columns}
 
-:::{.column width='40%'}
+:::{.column width='45%'}
 ```{r}
 #| output: asis
 put_board("Steinitz")
 ```
 :::
 
-:::{.column width='60%'}
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
 * Black wins a pawn here but gives white a lead in development and ends up with their king in a slightly awkward spot.
+:::
+
+::::
+
+## Scotch Gambit (4.Bc4)
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("scotch-gambit")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+<ul>
+<li> This line transitions into the Italian Game </li>
+<li id = "scotch-gambit-variation-accepted"> Black can further accept the gambit with 5...dxc3 </li>
+<li id = "scotch-gambit-variation-london"> 4...Bb4+ is the London Defense </li>
+</ul>
 :::
 
 ::::

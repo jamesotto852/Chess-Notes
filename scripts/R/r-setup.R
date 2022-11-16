@@ -2,14 +2,12 @@ library("tidyverse")
 library("glue")
 library("chess")
 
+`%||%` <- function(LHS, RHS) {
+  if (is.null(LHS)) RHS else LHS
+}
+
 move_g <- function(..., fen) move(game(fen = fen), ...)
 move_v <- function(v, fen = NULL) lift_dv(move_g, fen = fen)(v)
-
-move_v(c("e4", "e5"))
-move_v(c("Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3"),
-       fen = "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2")
-
-move_v(c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3"))
 
 fen_seq <- function(game) {
   k <- ply_number(game)
@@ -25,18 +23,37 @@ lichess_link = function(positions) {
     map_chr(\(fen) str_c("https://lichess.org/analysis/", fen))
 }
 
-add_game <- function(df = NULL, title, moves, start = 1, notation = FALSE, position = "start") {
+add_game <- function(df = NULL, title, moves, start = 1, notation = FALSE, position = "start", variations = NA, type = "main") {
   if (is.null(df)) {
     tibble(
       title = title,
       moves = list(moves),
       start = start,
       notation = if (notation) "show" else "hide",
-      position = position
+      position = position,
+      type = type,
+      variations = list(variations),
     )
   } else {
-    bind_rows(df, add_game(df = NULL, title, moves, start, notation, position))
+    bind_rows(df, add_game(df = NULL, title, moves, start, notation, position, variations, type))
   }
+}
+
+add_variation <- function(df, title, moves, start = NULL, notation = NULL, position = NULL) {
+
+  main <- df |>
+    filter(type == "main") |>
+    slice_tail(n = 1)
+
+  add_game(
+    df, title, moves,
+    start %||% main$start,
+    notation %||% main$start,
+    position %||% main$position,
+    variations = NA,
+    type = "variation"
+  )
+
 }
 
 
