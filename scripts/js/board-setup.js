@@ -106,8 +106,8 @@ board_setup = function(data, title) {
         if (game.title === variations[k]) {
 
           d3.select('#' + game.title)
-            .style("box-shadow", "inset 0 0 0 0 #2780e3")
-            .style("color", "#2780e3")
+            .style("box-shadow", null)
+            .style("color", null)
 
           game = data.find(d => d.title === title)
           pos = game.start - 1
@@ -129,11 +129,6 @@ board_setup = function(data, title) {
             .classed('btn-success', false)
             .classed('btn-primary', true)
 
-        // indicate variation is selected
-        d3.select('#' + variations[k])
-          .style("box-shadow", "inset 10vw 0 0 0 #2780e3")
-          .style("color", "white")
-
         // need to unset styling for other variations
         variations.filter(name => !(name === variations[k]))
           .map(name =>  {
@@ -143,6 +138,11 @@ board_setup = function(data, title) {
               //.style("box-shadow", "inset 0 0 0 0 #2780e3")
               //.style("color", "#2780e3")
           })
+
+        // indicate variation is selected
+        d3.select('#' + variations[k])
+          .style("box-shadow", "inset 10vw 0 0 0 #2780e3")
+          .style("color", "white")
 
         }
 
