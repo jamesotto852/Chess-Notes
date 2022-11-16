@@ -31,19 +31,32 @@ scotch <-
     title = "classical-1",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
               "Nxc6", "Qf6", "Qd2", "dxc6", "Nc3")
-    # start = 10 
   ) |>
   add_variation(
     title = "classical-2",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
               "Be3", "Qf6", "c3", "Nge7", "Bc4", "0-0", "0-0", "Bb6")
-    # start = 10
   ) |>
   add_variation(
     title = "classical-3",
     moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5",
               "Nb3", "Bb6", "a4", "a6", "Nc3")
-    # start = 10
+  ) |>
+  add_game(
+    title = "Schmidt",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6"),
+    start = 7,
+    variations = c("four-knights", "Mieses")
+  ) |>
+  add_variation(
+    title = "four-knights",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6",
+              "Nc3", "Bb4", "Nxc6", "bxc6", "Bd3", "d5", "exd5", "cxd5", "0-0", "0-0", "Bg5", "c6"),
+  )  |>
+  add_variation(
+    title = "Mieses",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nf6",
+              "Nxc6", "bxc6", "e5", "Qe7", "Qe2", "Nd5", "c4"),
   ) |>
   add_game(
     title = "Steinitz",
@@ -53,22 +66,44 @@ scotch <-
   ) |>
   add_game(
     title = "scotch-gambit",
-    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", 
-              "Bc4", "Bc5", "c3", "Nf6"),
-    variations = c("scotch-gambit-variation-accepted", "scotch-gambit-variation-london"),
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4"),
+    variations = c("scotch-gambit-variation-italian", "scotch-gambit-variation-accepted", "scotch-gambit-variation-london"),
     start = 7
   ) |>
   add_variation(
+    title = "scotch-gambit-variation-italian",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
+              "Bc5", "c3", "Nf6"),
+    start = 7 
+  ) |>
+  add_variation(
     title = "scotch-gambit-variation-accepted",
-    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", 
-              "Bc4", "Bc5", "c3", "dxc3", "Bxf7+", "Kxf7", "Qd5+"),
-    start = 10 
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
+              "Bc5", "c3", "dxc3", "Bxf7+", "Kxf7", "Qd5+"),
+    start = 7 
   ) |>
   add_variation(
     title = "scotch-gambit-variation-london",
-    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", 
-              "Bc4", "Bb4+"),
-    start = 8
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Bc4",
+              "Bb4+"),
+    start = 7
+  ) |>
+  ## TRAPS
+  add_game(
+    title = "traps-classical",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4"),
+    start = 7,
+    variations = c("traps-classical-1", "traps-classical-2")
+  ) |>
+  add_variation(
+    title = "traps-classical-1",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
+              "Bc5", "Be3", "Nf6", "Nxc6", "dxc6", "Qxd8+", "Kxd8", "Bxc5", "Nxe4")
+  ) |>
+  add_variation(
+    title = "traps-classical-2",
+    moves = c("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4",
+              "Bc5", "Be3", "d6", "Nxc6", "bxc6", "Bxc5", "dxc5", "Qxd8+", "Kxd8")
   ) |>
   # add_game(
   #   title = "Endgame",
@@ -111,12 +146,31 @@ put_board("classical")
 
 :::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
 
-After 4.Nxd4 Bc5 there are three main lines: 
-<ul>
-<li id = "classical-1"> 5.Nxc6 </li>
-<li id = "classical-2"> 5.Be3 </li>
-<li id = "classical-3"> 5.Nb3 </li>
-</ul>
+* After 4.Nxd4 Bc5 there are three main lines: 
+  * <span class="variation" id = "classical-1"> 5.Nxc6 </span>
+  * <span class="variation" id = "classical-2"> 5.Be3 </span>
+  * <span class="variation" id = "classical-3"> 5.Nb3 </span>
+
+:::
+
+::::
+
+### Schmidt Variation (4...Nf6) {.unnumbered}
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("Schmidt")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+
+* After 4.Nxd4 Nf6 there are two options:
+  * The Mieses Variation: <span class="variation" id = "Mieses"> 5.Nxc6 </span>
+  * The Scotch Four Knights Game: <span class="variation" id = "four-knights"> 5.Nc3 </span>
 
 :::
 
@@ -150,11 +204,41 @@ put_board("scotch-gambit")
 :::
 
 :::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
-<ul>
-<li> This line transitions into the Italian Game </li>
-<li id = "scotch-gambit-variation-accepted"> Black can further accept the gambit with 5...dxc3 </li>
-<li id = "scotch-gambit-variation-london"> 4...Bb4+ is the London Defense </li>
-</ul>
+* Black can accept with <span class="variation" id = "scotch-gambit-variation-accepted"> 4...Bc5 5.c3 dxc3 </span>.
+* Alternatively, <span class="variation" id="scotch-gambit-variation-italian">  5...Nf6 </span> transitions into the Italian Game
+* <span class="variation" id = "scotch-gambit-variation-london"> 4...Bb4+ </span> is the London Defense 
 :::
 
 ::::
+
+
+## Traps
+
+### Classical Variation (4.Nxd4 Bc5) {.unnumbered}
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("traps-classical")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+
+* If black doesn't defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!
+  * For example, <span class="variation" id = "traps-classical-1"> 5....Nf6 </span> loses the bishop
+  * <span class="variation" id = "traps-classical-2"> 5....d6 </span> defends the bishop, but it's not pretty
+  
+:::
+
+::::
+
+
+
+
+
+
+
+
+

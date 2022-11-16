@@ -24,6 +24,9 @@ board_setup = function(data, title) {
   // Note: boolean arrays don't survive transpose(), need to use characters ("show" and "hide")
   var board = Chessboard(title, {showNotation: game.notation === 'show', position: game.positions[pos], draggable: true, dropOffBoard: 'trash', onDragMove: onDragMove})
 
+  // resize board if window is resized
+  $(window).resize(board.resize)
+
   d3.select('#prev-' + title).property("disabled", pos == 0)
   d3.select('#next-' + title).property("disabled", pos == game.positions.length - 1)
 
@@ -56,6 +59,11 @@ board_setup = function(data, title) {
 
       // if looking at a variation, reset to main line
       if (!(variations === undefined) && variations.includes(game.title)) {
+
+        d3.select('#' + game.title)
+          .style("box-shadow", "inset 0 0 0 0 #2780e3")
+          .style("color", "#2780e3")
+
         game = data.find(d => d.title === title)
 
         d3.select('#reset-' + title)
@@ -85,10 +93,6 @@ board_setup = function(data, title) {
   })
 
 
-  // support for variations:
-
-
-
   if (!(variations === undefined)) {
 
     if (!(Array.isArray(variations))) {
@@ -97,18 +101,56 @@ board_setup = function(data, title) {
 
     for (let k = 0; k < variations.length; k++) {
       $('#' + variations[k]).on('click', function() {
-        game = data.find(d => d.title === variations[k])
-        pos = game.start - 1
-        board.position(game.positions[pos])
 
+        // if clicked on active variation, reset to main line
+        if (game.title === variations[k]) {
+
+          d3.select('#' + game.title)
+            .style("box-shadow", "inset 0 0 0 0 #2780e3")
+            .style("color", "#2780e3")
+
+          game = data.find(d => d.title === title)
+          pos = game.start - 1
+          board.position(game.positions[pos])
+
+          d3.select('#reset-' + title)
+            .classed('btn-primary', false)
+            .classed('btn-outline-secondary', true)
+
+        // otherwise, set to selected variation
+        } else {
+
+          game = data.find(d => d.title === variations[k])
+          pos = game.start - 1
+          board.position(game.positions[pos])
+
+          d3.select('#reset-' + title)
+            .classed('btn-outline-secondary', false)
+            .classed('btn-success', false)
+            .classed('btn-primary', true)
+
+        // indicate variation is selected
+        d3.select('#' + variations[k])
+          .style("box-shadow", "inset 10vw 0 0 0 #2780e3")
+          .style("color", "white")
+
+        // need to unset styling for other variations
+        variations.filter(name => !(name === variations[k]))
+          .map(name =>  {
+            d3.select('#' + name)
+              .style("box-shadow", null)
+              .style("color", null)
+              //.style("box-shadow", "inset 0 0 0 0 #2780e3")
+              //.style("color", "#2780e3")
+          })
+
+        }
+
+        // activate/deactivate UI
         d3.select('#analyze-' + title).property("disabled", false)
         d3.select('#prev-' + title).property("disabled", pos == 0)
         d3.select('#next-' + title).property("disabled", pos == game.positions.length - 1)
 
-        d3.select('#reset-' + title)
-          .classed('btn-outline-secondary', false)
-          .classed('btn-success', false)
-          .classed('btn-primary', true)
       })
     }
 
