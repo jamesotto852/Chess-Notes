@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="/scripts/chessboard/css/chessboard-1.0.0.css">
+      
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+<script src="/scripts/chessboard/js/chessboard-1.0.0.js"></script>
+
+# Scandinavian Defense
+
+```{r, file='scripts/R/r-setup.R'}
+```
+
+```{ojs, file='scripts/js/board-setup.js'}
+```
+
+```{r}
+scandi <-
+  add_game(
+    title = "intro",
+    moves = c("e4", "d5", "exd5", "Qxd5", "Nc3", "Qd8"),
+    orientation = "black",
+    notation = TRUE
+  ) |>
+  add_game(
+    title = "4d4_Nf6_5Nf3_Bg4",
+    moves = c("e4", "d5", "exd5", "Qxd5", "Nc3", "Qd8",
+              "d4", "Nf6", "Nf3",  "Bg4"),
+    start = 7,
+    orientation = "black",
+    variations = c("v-4Nc3_Qd8_5Nf3_Bg4_6Bc4", "v-4Nc3_Qd8_5Nf3_Bg4_6Be2")
+  ) |>
+  add_variation(
+    title = "v-4Nc3_Qd8_5Nf3_Bg4_6Bc4",
+    moves = c("e4", "d5", "exd5", "Qxd5", "Nc3", "Qd8",
+              "d4", "Nf6", "Nf3",  "Bg4",
+              "Bc4", "e6", "h3", "Bxf3", "Qxf3", "c6", "Ne2", "Nbd7",  "O-O", "Bd6", "b3", "O-O", "Bb2", "a5"),
+    start = 11 
+  ) |>
+  add_variation(
+    title = "v-4Nc3_Qd8_5Nf3_Bg4_6Be2",
+    moves = c("e4", "d5", "exd5", "Qxd5", "Nc3", "Qd8",
+              "d4", "Nf6", "Nf3",  "Bg4",
+              "Be2", "e6", "h3", "Bxf3", "Bxf3", "c6", "O-O", "Bd6",  "Ne2", "Nbd7", "c4", "O-O", "Nc3", "Qc7", "b3", "Rad8", "Bb2",  "Rfe8"),
+    start = 11
+  ) |>
+  clean_chess_df() |>
+  write_png("Scandinavian-Defense")
+
+ojs_define(scandi_t = scandi)
+```
+
+```{ojs}
+transpose(scandi_t).filter(d => d.type === 'main')
+  .map(d => board_setup(transpose(scandi_t), d.title))
+```
+
+## Introduction
+
+The Scandinavian Defense begins with 1.e4 d5.
+Then, white typically captures 2.exd5 and black recaptures with 2...Qxd5.
+Here, we will mainly be looking at at lines following 3.Nc3 Qd8.
+While there are other options after 3.Nc3 (3...Qa5, 3...Qd6), I am focusing on 3...Qd8 for now.
+
+```{r}
+#| output: asis
+put_board("intro")
+```
+
+## Main Line (2.exd5 Qxd5)
+
+### 4.d4 Nf6 
+
+#### 5.Nf3 Bg4
+
+5.Nf3 is the most common response to 4.d4 Nf6.
+Meet this with 5...Bg4 to put pressure on d4 with the queen.
+  
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("4d4_Nf6_5Nf3_Bg4")
+# put_board("classical")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+  * <span class="variation" id = "v-4Nc3_Qd8_5Nf3_Bg4_6Bc4"> 6.Bc4 </span> threatens 7.Bxf7+ then 8.Ne5+
+  * <span class="variation" id = "v-4Nc3_Qd8_5Nf3_Bg4_6Be2"> 6.Be2 </span> placeholder
+:::
+
+::::
+
+#### 5.Bc4 a6
+
+
+## References {.unnumbered}
+
+<button class="btn" style="width: unset;">
+<a href="pgn-files/Scandinavian-Defense.pgn" download="Scandinavian-Defense.pgn">
+<i class="fa fa-download"></i> Download PGN
+</a>
+</button>
+
+
+<!-- todo: -->
+<!--   - 3...d6 -->
+<!--   - 4...Nxd4 -->
+<!--   - Göring Gambit -->
+
+
+
+
+

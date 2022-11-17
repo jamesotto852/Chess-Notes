@@ -23,6 +23,11 @@ board_setup = function(data, title) {
   // Note: boolean arrays don't survive transpose(), need to use characters ("show" and "hide")
   var board = Chessboard(title, {showNotation: game.notation === 'show', position: game.positions[pos], draggable: true, dropOffBoard: 'trash', onDragMove: onDragMove})
 
+  // flip initial orientation if needed
+  if (game.orientation === "black") {
+    board.flip()
+  }
+
   // resize board if window is resized
   $(window).resize(board.resize)
 

@@ -10,7 +10,7 @@ book:
     - part: openings.qmd
       chapters:
         - scotch.qmd
-        - fried-liver.qmd
+        - scandinavian-defense.qmd
   appendices:
     - references.qmd
 
@@ -20,6 +20,7 @@ format:
   html:
     theme: cosmo
     css: "css/styles.css"
+    number-depth: 2
   pdf:
     documentclass: scrreprt
 

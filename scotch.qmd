@@ -117,7 +117,8 @@ scotch <-
   #   moves = c("Ka3"),
   #   position = "8/1k6/8/8/8/3Q4/K7/8 w - - 0 1"
   # ) |>
-  clean_chess_df()
+  clean_chess_df() |>
+  write_png("Scotch")
 
 ojs_define(scotch_t = scotch)
 ```
@@ -140,7 +141,7 @@ put_board("intro")
 
 ## Main Line (4.Nxd4)
 
-### Classical Variation (4...Bc5) {.unnumbered}
+### Classical Variation (4...Bc5) 
 
 ::::{.columns}
 
@@ -162,7 +163,7 @@ put_board("classical")
 
 ::::
 
-### Schmidt Variation (4...Nf6) {.unnumbered}
+### Schmidt Variation (4...Nf6) 
 
 ::::{.columns}
 
@@ -184,7 +185,7 @@ put_board("Schmidt")
 ::::
 
 
-### Steinitz Variation (4...Qh4!?) {.unnumbered}
+### Steinitz Variation (4...Qh4!?) 
 ::::{.columns}
 
 :::{.column width='45%'}
@@ -221,7 +222,7 @@ put_board("scotch-gambit")
 
 ## Traps
 
-### Classical Variation (4.Nxd4 Bc5 5.Be3) {.unnumbered}
+### Classical Variation (4.Nxd4 Bc5) 
 ::::{.columns}
 
 :::{.column width='45%'}
@@ -243,9 +244,19 @@ put_board("traps-classical")
 
 
 
-todo:
-  - 3...d6
-  - Göring Gambit
+## References {.unnumbered}
+
+<button class="btn" style="width: unset;">
+<a href="pgn-files/Scotch.pgn" download="Scotch.pgn">
+<i class="fa fa-download"></i> Download PGN
+</a>
+</button>
+
+
+<!-- todo: -->
+<!--   - 3...d6 -->
+<!--   - 4...Nxd4 -->
+<!--   - Göring Gambit -->
 
 
 
