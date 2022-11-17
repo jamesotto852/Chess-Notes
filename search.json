@@ -32,20 +32,34 @@
     "href": "scotch.html#traps",
     "title": "1  The Scotch",
     "section": "1.4 Traps",
-    "text": "1.4 Traps\n\nClassical Variation (4.Nxd4 Bc5 5.Be3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf black doesn’t defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!\n\nFor example,  5….Nf6  loses the bishop\n 5….d6  defends the bishop, but it’s not pretty"
+    "text": "1.4 Traps\n\nClassical Variation (4.Nxd4 Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf black doesn’t defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!\n\nFor example,  5….Nf6  loses the bishop\n 5….d6  defends the bishop, but it’s not pretty"
   },
   {
-    "objectID": "fried-liver.html#introduction",
-    "href": "fried-liver.html#introduction",
-    "title": "2  Fried Liver Attack",
+    "objectID": "scotch.html#references",
+    "href": "scotch.html#references",
+    "title": "1  The Scotch",
+    "section": "References",
+    "text": "References\n\n  Download PGN"
+  },
+  {
+    "objectID": "scandinavian-defense.html#introduction",
+    "href": "scandinavian-defense.html#introduction",
+    "title": "2  Scandinavian Defense",
     "section": "2.1 Introduction",
-    "text": "2.1 Introduction"
+    "text": "2.1 Introduction\nThe Scandinavian Defense begins with 1.e4 d5. Then, white typically captures 2.exd5 and black recaptures with 2…Qxd5. Here, we will mainly be looking at at lines following 3.Nc3 Qd8. While there are other options after 3.Nc3 (3…Qa5, 3…Qd6), I am focusing on 3…Qd8 for now."
   },
   {
-    "objectID": "fried-liver.html#continuing",
-    "href": "fried-liver.html#continuing",
-    "title": "2  Fried Liver Attack",
-    "section": "2.2 Continuing",
-    "text": "2.2 Continuing"
+    "objectID": "scandinavian-defense.html#main-line-2.exd5-qxd5",
+    "href": "scandinavian-defense.html#main-line-2.exd5-qxd5",
+    "title": "2  Scandinavian Defense",
+    "section": "2.2 Main Line (2.exd5 Qxd5)",
+    "text": "2.2 Main Line (2.exd5 Qxd5)\n\n4.d4 Nf6\n\n5.Nf3 Bg4\n5.Nf3 is the most common response to 4.d4 Nf6. Meet this with 5…Bg4 to put pressure on d4 with the queen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 6.Bc4  threatens 7.Bxf7+ then 8.Ne5+\n 6.Be2  placeholder\n\n\n\n\n\n5.Bc4 a6"
+  },
+  {
+    "objectID": "scandinavian-defense.html#references",
+    "href": "scandinavian-defense.html#references",
+    "title": "2  Scandinavian Defense",
+    "section": "References",
+    "text": "References\n\n  Download PGN"
   }
 ]
