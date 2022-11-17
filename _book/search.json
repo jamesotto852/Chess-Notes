@@ -35,27 +35,6 @@
     "text": "1.4 Traps\n\nClassical Variation (4.Nxd4 Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf black doesn’t defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!\n\nFor example,  5….Nf6  loses the bishop\n 5….d6  defends the bishop, but it’s not pretty"
   },
   {
-    "objectID": "fried-liver.html#introduction",
-    "href": "fried-liver.html#introduction",
-    "title": "3  Fried Liver Attack",
-    "section": "3.1 Introduction",
-    "text": "3.1 Introduction"
-  },
-  {
-    "objectID": "fried-liver.html#continuing",
-    "href": "fried-liver.html#continuing",
-    "title": "3  Fried Liver Attack",
-    "section": "3.2 Continuing",
-    "text": "3.2 Continuing"
-  },
-  {
-    "objectID": "scotch.html#pgn-export",
-    "href": "scotch.html#pgn-export",
-    "title": "1  The Scotch",
-    "section": "PGN Export",
-    "text": "PGN Export\n\n  Download PGN"
-  },
-  {
     "objectID": "scotch.html#references",
     "href": "scotch.html#references",
     "title": "1  The Scotch",
@@ -74,7 +53,7 @@
     "href": "scandinavian-defense.html#main-line-2.exd5-qxd5",
     "title": "2  Scandinavian Defense",
     "section": "2.2 Main Line (2.exd5 Qxd5)",
-    "text": "2.2 Main Line (2.exd5 Qxd5)\n\n4.d4 Nf6\n\n5.Nf3 Bg4\n5.Nf3 is the most common response to 4.d4 Nf6. Meet this with 5…Bg4 to put pressure on d4 with the queen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 6.Bc4  threatens 7.Bxf7+ then 8.Ne5+\n 6.Be2  placeholder\n\n\n\n\n\n5.Bc4 a6"
+    "text": "2.2 Main Line (2.exd5 Qxd5)\n\n4.d4 Nf6\n\n5.Nf3 Bg4\n5.Nf3 is the most common response to 4.d4 Nf6. Meet this with 5…Bg4 to put pressure on d4 with the queen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 6.Bc4  threatens 7.Bxf7+ then 8.Ne5+\n 6.Be2  placeholder\n\n\n\n\n\n\n\n\n\n\n5.Bc4 a6"
   },
   {
     "objectID": "scandinavian-defense.html#references",
@@ -82,5 +61,12 @@
     "title": "2  Scandinavian Defense",
     "section": "References",
     "text": "References\n\n  Download PGN"
+  },
+  {
+    "objectID": "scandinavian-defense.html#test",
+    "href": "scandinavian-defense.html#test",
+    "title": "2  Scandinavian Defense",
+    "section": "2.1 Test",
+    "text": "2.1 Test\n\n\n\n\n\n\nAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."
   }
 ]
