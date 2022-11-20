@@ -46,14 +46,21 @@
     "href": "scandinavian-defense.html#introduction",
     "title": "2  Scandinavian Defense",
     "section": "2.1 Introduction",
-    "text": "2.1 Introduction\nThe Scandinavian Defense begins with 1.e4 d5. Then, white typically captures 2.exd5 and black recaptures with 2…Qxd5. Here, we will mainly be looking at at lines following 3.Nc3 Qd8. While there are other options after 3.Nc3 (3…Qa5, 3…Qd6), I am focusing on 3…Qd8 for now."
+    "text": "2.1 Introduction\nThe Scandinavian Defense begins with 1.e4 d5. Then, white typically captures 2.exd5 and black recaptures with 2…Qxd5. Here we will mainly be looking at at lines following 3.Nc3 Qd8, although there are other options after 3.Nc3 (3…Qa5, 3…Qd6)."
   },
   {
     "objectID": "scandinavian-defense.html#main-line-2.exd5-qxd5",
     "href": "scandinavian-defense.html#main-line-2.exd5-qxd5",
     "title": "2  Scandinavian Defense",
     "section": "2.2 Main Line (2.exd5 Qxd5)",
-    "text": "2.2 Main Line (2.exd5 Qxd5)\n\n4.d4 Nf6\n\n5.Nf3 Bg4\n5.Nf3 is the most common response to 4.d4 Nf6. Meet this with 5…Bg4 to put pressure on d4 with the queen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 6.Bc4  threatens 7.Bxf7+ then 8.Ne5+\n 6.Be2  placeholder\n\n\n\n\n\n5.Bc4 a6"
+    "text": "2.2 Main Line (2.exd5 Qxd5)\n\n4.d4 Nf6\n\n5.Nf3 Bg4\n5.Nf3 is the most common response to 4.d4 Nf6. Meet this with 5…Bg4 to put pressure on d4 with the queen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 6.Bc4  threatens 7.Bxf7+ then 8.Ne5+\n 6.Be2  placeholder\n\n\n\n\n\n\n\n\n\n\n5.Bc4 a6"
+  },
+  {
+    "objectID": "scandinavian-defense.html#what-if-2exd4",
+    "href": "scandinavian-defense.html#what-if-2exd4",
+    "title": "2  Scandinavian Defense",
+    "section": "2.3 What if 2exd4?",
+    "text": "2.3 What if 2exd4?\n\n2.Nc3 exe4 3.Nxe4 Qd5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 4.Nf6 Qd8  transposes back to the mainline\nInstead of retreating, white might protect the knight with  4.Qf4 \n 4.Nd3  is also an option (note, black wins a piece if 9.Nxe5)\n 4.d3  is also an option, now black is looking for …e7-e5\n\n\n\n\n\n2. d4 (The Blackmar-Diemer Gambit)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntemp\n\n\n\n\n\n2. d3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe best response to 2. d3 is trading queens, entering a middle-game in which white can not castle"
   },
   {
     "objectID": "scandinavian-defense.html#references",
