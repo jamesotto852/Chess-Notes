@@ -55,6 +55,56 @@ scandi <-
               "Be2", "e6", "h3", "Bxf3", "Bxf3", "c6", "O-O", "Bd6",  "Ne2", "Nbd7", "c4", "O-O", "Nc3", "Qc7", "b3", "Rad8", "Bb2",  "Rfe8"),
     start = 11
   ) |>
+  add_game(
+    title = "2Nc3",
+    moves = c("e4", "d5", "Nc3", "dxe4", "Nxe4", "Qd5"),
+    orientation = "black",
+    start = 3,
+    variations = c("v-2Nc3-transpose", "v-2Nc3-4Qf3", "v-2Nc3-4Nd3", "v-2Nc3-4Nd3-9Nxe5", "v-2Nc3-4d3")
+  ) |>
+  add_variation(
+    title = "v-2Nc3-transpose",
+    moves = c("e4", "d5", "Nc3", "dxe4", "Nxe4", "Qd5", 
+              "Nc3", "Qd8"),
+    start = 7
+  ) |>
+  add_variation(
+    title = "v-2Nc3-4Qf3",
+    moves = c("e4", "d5", "Nc3", "dxe4", "Nxe4", "Qd5", 
+              "Qf3", "Nc6", "Ne2", "f5", "Ng5", "Qxf3", "Nxf3", "e5", "d4", "e4", "Ne5", "Nge7"),
+    start = 7
+  ) |>
+  add_variation(
+    title = "v-2Nc3-4Nd3",
+    moves = c("e4", "d5", "Nc3", "dxe4", "Nxe4", "Qd5", 
+              "Ng3", "Nc6", "Nf3", "e5", "b3", "Be6", "Bb2", "O-O-O", "Bc4", "Qd7"),
+    start = 7
+  ) |>
+  add_variation(
+    title = "v-2Nc3-4Nd3-9Nxe5",
+    moves = c("e4", "d5", "Nc3", "dxe4", "Nxe4", "Qd5", 
+              "Ng3", "Nc6", "Nf3", "e5", "b3", "Be6", "Bb2", "O-O-O", "Bc4", "Qd7",
+              "Nxe5", "Nxe5", "Bxe5", "Bxc4", "bxc4", "Re8", "f4", "f6"),
+    start = 17
+  ) |>
+  add_variation(
+    title = "v-2Nc3-4d3",
+    moves = c("e4", "d5", "Nc3", "dxe4", "Nxe4", "Qd5", 
+              "d3", "Nc6"),
+    start = 7
+  ) |>
+  add_game(
+    title = "2d4",
+    moves = c("e4", "d5", "d4", "dxe4"),
+    orientation = "black",
+    start = 3
+  ) |>
+  add_game(
+    title = "2d3",
+    moves = c("e4", "d5", "d3", "dxe4", "dxe4", "Qxd1+", "Kxd1"),
+    orientation = "black",
+    start = 3
+  ) |>
   clean_chess_df() |>
   write_png("Scandinavian-Defense")
 
@@ -70,8 +120,8 @@ transpose(scandi_t).filter(d => d.type === 'main')
 
 The Scandinavian Defense begins with 1.e4 d5.
 Then, white typically captures 2.exd5 and black recaptures with 2...Qxd5.
-Here, we will mainly be looking at at lines following 3.Nc3 Qd8.
-While there are other options after 3.Nc3 (3...Qa5, 3...Qd6), I am focusing on 3...Qd8 for now.
+Here we will mainly be looking at at lines following 3.Nc3 Qd8,
+although there are other options after 3.Nc3 (3...Qa5, 3...Qd6).
 
 ```{r}
 #| output: asis
@@ -93,7 +143,6 @@ Meet this with 5...Bg4 to put pressure on d4 with the queen.
 ```{r}
 #| output: asis
 put_board("4d4_Nf6_5Nf3_Bg4")
-# put_board("classical")
 ```
 
 <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> -->
@@ -118,6 +167,69 @@ put_board("4d4_Nf6_5Nf3_Bg4")
 <!-- </div> -->
 
 #### 5.Bc4 a6
+
+## What if <span style="text-decoration: line-through;">2exd4</span>?
+
+### 2.Nc3 exe4 3.Nxe4 Qd5
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("2Nc3")
+```
+
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+  * <span class="variation" id = "v-2Nc3-transpose"> 4.Nf6 Qd8 </span> transposes back to the mainline
+  * Instead of retreating, white might protect the knight with <span class="variation" id = "v-2Nc3-4Qf3"> 4.Qf4 </span>
+  * <span class="variation" id = "v-2Nc3-4Nd3"> 4.Nd3 </span> is also an option 
+  (note, black wins a piece if <span class="variation" id = "v-2Nc3-4Nd3-9Nxe5">9.Nxe5</span>)
+  * <span class="variation" id = "v-2Nc3-4d3"> 4.d3 </span> is also an option, now black is looking for ...e7-e5
+:::
+
+::::
+
+### 2. d4 (The Blackmar-Diemer Gambit)
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("2d4")
+```
+
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+  * temp
+:::
+
+::::
+
+
+
+### 2. d3
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("2d3")
+```
+
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+  * The best response to 2. d3 is trading queens, entering a middle-game in which
+  white can not castle
+:::
+
+::::
 
 
 ## References {.unnumbered}
