@@ -18,7 +18,7 @@
     "href": "scotch.html#main-line-4.nxd4",
     "title": "1  The Scotch",
     "section": "1.2 Main Line (4.Nxd4)",
-    "text": "1.2 Main Line (4.Nxd4)\n\nClassical Variation (4…Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Bc5 there are three main lines:\n\n 5.Nxc6 \n 5.Be3 \n 5.Nb3 \n\n\n\n\n\n\nSchmidt Variation (4…Nf6)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Nf6 there are two options:\n\nThe Mieses Variation:  5.Nxc6 \nThe Scotch Four Knights Game:  5.Nc3 \n\n\n\n\n\n\nSteinitz Variation (4…Qh4!?)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack wins a pawn here but gives white a lead in development and ends up with their king in a slightly awkward spot."
+    "text": "1.2 Main Line (4.Nxd4)\n\nClassical Variation (4…Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Bc5 there are three main lines:\n\n 5.Be3  (the most popular response)\n\nNote: 8…Bb6 is protecting the bishop\nInstead of 7…O-O,  7…Ne5  is also possible\n\n 5.Nb3  and  5.Nxc6 \n\n\n\n\n\n\nSchmidt Variation (4…Nf6)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Nf6 there are two options:\n\nThe Mieses Variation:  5.Nxc6 \nThe Scotch Four Knights Game:  5.Nc3 Bb4  or  5…Bc5 \n\n\n\n\n\n\nLolli Variation (4…Nxd4?)\nThe response to 4…Nxd4 is 5.Qxd4, black cannot attack the queen. Any attempt results in a poor position:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 5…Nf6 6.e5 , threatens to trap the knight\n\n 6…c5  is black’s best option (still bad)\n 6…Ng8  also saves the knight at a severe cost\n\n 5…c5 6.Qd3 d5  loses the d pawn\n\n 6…d6  postpones the loss, but after O-O-O and e4-e5 it will fall\n\n 5…Qf6  leads to a poor position\n\n 8…f6  loses a pawn\n 9…Bxd6  also loses a pawn\n\n\n\n\n\n\nOther fourth moves for black\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack has a few other options, besides 4…Bc5 and 4…Nf6:\n\n 4…Qf6  typically transposes into the mainline\n 4…Qh4  (the dubious Steinitz Variation)\n 4…Bb4  again, black has to retreat 6…Bb6"
   },
   {
     "objectID": "scotch.html#scotch-gambit-4.bc4",
@@ -32,7 +32,7 @@
     "href": "scotch.html#traps",
     "title": "1  The Scotch",
     "section": "1.4 Traps",
-    "text": "1.4 Traps\n\nClassical Variation (4.Nxd4 Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf black doesn’t defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!\n\nFor example,  5….Nf6  loses the bishop\n 5….d6  defends the bishop, but it’s not pretty"
+    "text": "1.4 Traps\n\nClassical Variation (4.Nxd4 Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf black doesn’t defend the bishop on c5 after 4.Nxd5 Bc5 5.Be3, white can take the knight on c6, winning the bishop!\n\nFor example,  5….Nf6  loses the bishop\n 5….d6  defends the bishop, but it’s not pretty\n\n\n\n\n\n\n3…d6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3…d6 4.dxe5 dxe5 5. Qxd8 is bad for black\n\nIf  5…Kxd8 , black loses the ability to castle and possibly the rook on h8\nBut,  5…Nxd8  loses a pawn"
   },
   {
     "objectID": "scotch.html#references",
@@ -60,7 +60,7 @@
     "href": "scandinavian-defense.html#what-if-2exd4",
     "title": "2  Scandinavian Defense",
     "section": "2.3 What if 2exd4?",
-    "text": "2.3 What if 2exd4?\n\n2.Nc3 exe4 3.Nxe4 Qd5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 4.Nf6 Qd8  transposes back to the mainline\nInstead of retreating, white might protect the knight with  4.Qf4 \n 4.Nd3  is also an option (note, black wins a piece if 9.Nxe5)\n 4.d3  is also an option, now black is looking for …e7-e5\n\n\n\n\n\n2. d4 (The Blackmar-Diemer Gambit)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntemp\n\n\n\n\n\n2. d3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe best response to 2. d3 is trading queens, entering a middle-game in which white can not castle"
+    "text": "2.3 What if 2exd4?\n\n2.Nc3 dxe4 3.Nxe4 Qd5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 4.Nf6 Qd8  transposes back to the mainline\nInstead of retreating, white might protect the knight with  4.Qf4 \n 4.Nd3  is also an option (note, black wins a piece if 9.Nxe5)\n 4.d3  is also an option, now black is looking for …e7-e5\n\n\n\n\n\n2. d4 (The Blackmar-Diemer Gambit)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntemp\n\n\n\n\n\n2. d3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe best response to 2. d3 is trading queens, entering a middle-game in which white can not castle"
   },
   {
     "objectID": "scandinavian-defense.html#references",

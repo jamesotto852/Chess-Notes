@@ -170,7 +170,7 @@ put_board("4d4_Nf6_5Nf3_Bg4")
 
 ## What if <span style="text-decoration: line-through;">2exd4</span>?
 
-### 2.Nc3 exe4 3.Nxe4 Qd5
+### 2.Nc3 dxe4 3.Nxe4 Qd5
 
 ::::{.columns}
 
