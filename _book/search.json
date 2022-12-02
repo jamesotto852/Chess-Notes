@@ -42,6 +42,48 @@
     "text": "References\n\n  Download PGN"
   },
   {
+    "objectID": "petrov-defense.html#introduction",
+    "href": "petrov-defense.html#introduction",
+    "title": "2  Petrov’s Defense",
+    "section": "2.1 Introduction",
+    "text": "2.1 Introduction\nPetrov’s Defense begins with 1.e4 e5 2.Nf3 Nf6. White has two main options for their third move: 3.Nxe5, the Classical Variation and 3.d4, the Steinitz Variation—here I focus on 3.Nxe5"
+  },
+  {
+    "objectID": "petrov-defense.html#classical-variation-3.nxe5-d6",
+    "href": "petrov-defense.html#classical-variation-3.nxe5-d6",
+    "title": "2  Petrov’s Defense",
+    "section": "2.2 Classical Variation (3.Nxe5 d6)",
+    "text": "2.2 Classical Variation (3.Nxe5 d6)\n3…d6 is Black’s best response to 3.Nxe5, followed with 4.Nf3 Nxe4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhite’s typical response is  5.d4 , white is looking to kick Black’s advanced knight from e4 with moves like c4 and Re1\nAn alternative option for white is  5.Nc3 , looking for Be3, Qd2, and 0-0-0 with a kingside attack\n\nIf  5…Bf5 , Black loses a piece"
+  },
+  {
+    "objectID": "petrov-defense.html#the-damiano-defense-3.nxe5-nxe4",
+    "href": "petrov-defense.html#the-damiano-defense-3.nxe5-nxe4",
+    "title": "2  Petrov’s Defense",
+    "section": "2.3 The Damiano Defense (3.Nxe5 Nxe4)",
+    "text": "2.3 The Damiano Defense (3.Nxe5 Nxe4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3…Nxe4 is bad for Black, 4.Qe2 poses quite a problem.\n\n 4…Nf6  loses the queen\n 4…d5  loses a pawn\n 4…Qe7  is “best”"
+  },
+  {
+    "objectID": "petrov-defense.html#stafford-gambit-3.nxe5-nc6",
+    "href": "petrov-defense.html#stafford-gambit-3.nxe5-nc6",
+    "title": "2  Petrov’s Defense",
+    "section": "2.4 Stafford Gambit (3.Nxe5 Nc6)",
+    "text": "2.4 Stafford Gambit (3.Nxe5 Nc6)\n3…Nc6 is the dubious but tricky Stafford Gambit. Once refuted, White has the advantage. The key initial moves for white are 5.d3 (defending e4) followed by 6.Be2 (developing the bishop while defending against Ng4).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAt this point, Black has two options:\n\nIf  6…h5 , calmly kick the bishop\nIf  6…Ng4 , take the knight with 7.Bxg4 then defend with the queen\n\nIn the latter, a queen trade is almost forced—Black may avoid this with  9…Qh5 \n\nThis is tricky though,  11…Bxc2  and  12…Bxc2  are both bad ideas"
+  },
+  {
+    "objectID": "petrov-defense.html#other-responses-to-3.nxe5",
+    "href": "petrov-defense.html#other-responses-to-3.nxe5",
+    "title": "2  Petrov’s Defense",
+    "section": "2.5 Other responses to 3.Nxe5",
+    "text": "2.5 Other responses to 3.Nxe5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 3…Qe7  is mildly worse for Black"
+  },
+  {
+    "objectID": "petrov-defense.html#references",
+    "href": "petrov-defense.html#references",
+    "title": "2  Petrov’s Defense",
+    "section": "References",
+    "text": "References\n\n  Download PGN"
+  },
+  {
     "objectID": "scandinavian-defense.html#introduction",
     "href": "scandinavian-defense.html#introduction",
     "title": "3  Scandinavian Defense",
@@ -68,54 +110,5 @@
     "title": "3  Scandinavian Defense",
     "section": "References",
     "text": "References\n\n  Download PGN"
-  },
-  {
-    "objectID": "petrov-defense.html#introduction",
-    "href": "petrov-defense.html#introduction",
-    "title": "2  Petrov’s Defense",
-    "section": "2.1 Introduction",
-    "text": "2.1 Introduction\nPetrov’s Defense begins with 1.e4 e5 2.Nf3 Nf6. White has two main options for their third move: 3.Nxe5, the Classical Variation and 3.d4, the Steinitz Variation—here I focus on 3.Nxe5"
-  },
-  {
-    "objectID": "petrov-defense.html#references",
-    "href": "petrov-defense.html#references",
-    "title": "2  Petrov’s Defense",
-    "section": "References",
-    "text": "References\n\n  Download PGN"
-  },
-  {
-    "objectID": "white.html",
-    "href": "white.html",
-    "title": " The white pieces",
-    "section": "",
-    "text": ".sidebar-item-text>.subchapter {\n  style=\"font-style: italic !important;\"\n}"
-  },
-  {
-    "objectID": "petrov-defense.html#classical-variation-3.nxe5-d6",
-    "href": "petrov-defense.html#classical-variation-3.nxe5-d6",
-    "title": "2  Petrov’s Defense",
-    "section": "2.2 Classical Variation (3.Nxe5 d6)",
-    "text": "2.2 Classical Variation (3.Nxe5 d6)\n3…d6 is Black’s best response to 3.Nxe5, followed with 4.Nf3 Nxe4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhite’s typical response is  5.d4 , white is looking to kick Black’s advanced knight from e4 with moves like c4 and Re1\nAn alternative option for white is  5.Nc3 , looking for Be3, Qd2, and 0-0-0 with a kingside attack\n\nIf  5…Bf5 , Black loses a piece"
-  },
-  {
-    "objectID": "petrov-defense.html#stafford-gambit-3.nxe5-nc6",
-    "href": "petrov-defense.html#stafford-gambit-3.nxe5-nc6",
-    "title": "2  Petrov’s Defense",
-    "section": "2.4 Stafford Gambit (3.Nxe5 Nc6)",
-    "text": "2.4 Stafford Gambit (3.Nxe5 Nc6)\n3…Nc6 is the dubious but tricky Stafford Gambit. Once refuted, White has the advantage. The key initial moves for white are 5.d3 (defending e4) followed by 6.Be2 (developing the bishop while defending against Ng4).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAt this point, Black has two options:\n\nIf  6…h5 , calmly kick the bishop\nIf  6…Ng4 , take the knight with 7.Bxg4 then defend with the queen\n\nIn the latter, a queen trade is almost forced—Black may avoid this with  9…Qh5 \n\nThis is tricky though,  11…Bxc2  and  12…Bxc2  are both bad ideas"
-  },
-  {
-    "objectID": "petrov-defense.html#the-damiano-defense-3.nxe5-nxe4",
-    "href": "petrov-defense.html#the-damiano-defense-3.nxe5-nxe4",
-    "title": "2  Petrov’s Defense",
-    "section": "2.3 The Damiano Defense (3.Nxe5 Nxe4)",
-    "text": "2.3 The Damiano Defense (3.Nxe5 Nxe4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3…Nxe4 is bad for Black, 4.Qe2 poses quite a problem.\n\n 4…Nf6  loses the queen\n 4…d5  loses a pawn\n 4…Qe7  is “best”"
-  },
-  {
-    "objectID": "petrov-defense.html#other-responses-to-3.nxe5",
-    "href": "petrov-defense.html#other-responses-to-3.nxe5",
-    "title": "2  Petrov’s Defense",
-    "section": "2.5 Other responses to 3.Nxe5",
-    "text": "2.5 Other responses to 3.Nxe5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 3…Qe7  is mildly worse for Black"
   }
 ]
