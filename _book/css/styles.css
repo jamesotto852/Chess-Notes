@@ -1,5 +1,15 @@
 @import url(https://use.fontawesome.com/releases/v6.1.1/css/all.css);
 
+.sidebar-item-text>.subchapter {
+  font-weight: 600;
+}
+
+/*
+.sidebar-item-text:has(.subchapter) {
+  pointer-events: none;
+  cursor: default;
+}
+*/
 
 .variation {
   display: inline-block;

@@ -9,7 +9,10 @@ book:
     - index.qmd
     - part: openings.qmd
       chapters:
+        - white.qmd
         - scotch.qmd
+        - petrov-defense.qmd
+        - black.qmd
         - scandinavian-defense.qmd
   appendices:
     - references.qmd

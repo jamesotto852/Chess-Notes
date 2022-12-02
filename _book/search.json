@@ -18,7 +18,7 @@
     "href": "scotch.html#main-line-4.nxd4",
     "title": "1  The Scotch",
     "section": "1.2 Main Line (4.Nxd4)",
-    "text": "1.2 Main Line (4.Nxd4)\n\nClassical Variation (4…Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Bc5 there are three main lines:\n\n 5.Be3  (the most popular response)\n\nNote: 8…Bb6 is protecting the bishop\nInstead of 7…O-O,  7…Ne5  is also possible\n\n 5.Nb3  and  5.Nxc6 \n\n\n\n\n\n\nSchmidt Variation (4…Nf6)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Nf6 there are two options:\n\nThe Mieses Variation:  5.Nxc6 \nThe Scotch Four Knights Game:  5.Nc3 Bb4  or  5…Bc5 \n\n\n\n\n\n\nLolli Variation (4…Nxd4?)\nThe response to 4…Nxd4 is 5.Qxd4, black cannot attack the queen. Any attempt results in a poor position:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 5…Nf6 6.e5 , threatens to trap the knight\n\n 6…c5  is black’s best option (still bad)\n 6…Ng8  also saves the knight at a severe cost\n\n 5…c5 6.Qd3 d5  loses the d pawn\n\n 6…d6  postpones the loss, but after O-O-O and e4-e5 it will fall\n\n 5…Qf6  leads to a poor position\n\n 8…f6  loses a pawn\n 9…Bxd6  also loses a pawn\n\n\n\n\n\n\nOther fourth moves for black\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack has a few other options, besides 4…Bc5 and 4…Nf6:\n\n 4…Qf6  typically transposes into the mainline\n 4…Qh4  (the dubious Steinitz Variation)\n 4…Bb4  again, black has to retreat 6…Bb6"
+    "text": "1.2 Main Line (4.Nxd4)\n\nClassical Variation (4…Bc5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Bc5 there are three main lines:\n\n 5.Be3  (the most popular response)\n\nNote: 8…Bb6 is protecting the bishop\nInstead of 7…O-O,  7…Ne5  is also possible\n\n 5.Nb3  and  5.Nxc6 \n\n\n\n\n\n\nSchmidt Variation (4…Nf6)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter 4.Nxd4 Nf6 there are two options:\n\nThe Mieses Variation:  5.Nxc6 \nThe Scotch Four Knights Game:  5.Nc3 Bb4  or  5…Bc5 \n\n\n\n\n\n\nLolli Variation (4…Nxd4?)\nThe response to 4…Nxd4 is 5.Qxd4, black cannot attack the queen. Any attempt results in a poor position:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 5…Nf6 6.e5  threatens to trap the knight\n\n 6…c5  is black’s best option (still bad)\n 6…Ng8  also saves the knight at a severe cost\n\n 5…c5 6.Qd3 d5  loses the d pawn\n\n 6…d6  postpones the loss, but after O-O-O and e4-e5 it will fall\n\n 5…Qf6  leads to a poor position\n\n 8…f6  loses a pawn\n 9…Bxd6  also loses a pawn\n\n\n\n\n\n\nOther fourth moves for black\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlack has a few other options, besides 4…Bc5 and 4…Nf6:\n\n 4…Qf6  typically transposes into the mainline\n 4…Qh4  (the dubious Steinitz Variation)\n 4…Bb4  again, black has to retreat 6…Bb6"
   },
   {
     "objectID": "scotch.html#scotch-gambit-4.bc4",
@@ -44,29 +44,78 @@
   {
     "objectID": "scandinavian-defense.html#introduction",
     "href": "scandinavian-defense.html#introduction",
-    "title": "2  Scandinavian Defense",
-    "section": "2.1 Introduction",
-    "text": "2.1 Introduction\nThe Scandinavian Defense begins with 1.e4 d5. Then, white typically captures 2.exd5 and black recaptures with 2…Qxd5. Here we will mainly be looking at at lines following 3.Nc3 Qd8, although there are other options after 3.Nc3 (3…Qa5, 3…Qd6)."
+    "title": "3  Scandinavian Defense",
+    "section": "3.1 Introduction",
+    "text": "3.1 Introduction\nThe Scandinavian Defense begins with 1.e4 d5. Then, white typically captures 2.exd5 and black recaptures with 2…Qxd5. Here we will mainly be looking at at lines following 3.Nc3 Qd8, although there are other options after 3.Nc3 (3…Qa5, 3…Qd6)."
   },
   {
     "objectID": "scandinavian-defense.html#main-line-2.exd5-qxd5",
     "href": "scandinavian-defense.html#main-line-2.exd5-qxd5",
-    "title": "2  Scandinavian Defense",
-    "section": "2.2 Main Line (2.exd5 Qxd5)",
-    "text": "2.2 Main Line (2.exd5 Qxd5)\n\n4.d4 Nf6\n\n5.Nf3 Bg4\n5.Nf3 is the most common response to 4.d4 Nf6. Meet this with 5…Bg4 to put pressure on d4 with the queen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 6.Bc4  threatens 7.Bxf7+ then 8.Ne5+\n 6.Be2  placeholder\n\n\n\n\n\n\n\n\n\n\n5.Bc4 a6"
+    "title": "3  Scandinavian Defense",
+    "section": "3.2 Main Line (2.exd5 Qxd5)",
+    "text": "3.2 Main Line (2.exd5 Qxd5)\n\n4.d4 Nf6\n\n5.Nf3 Bg4\n5.Nf3 is the most common response to 4.d4 Nf6. Meet this with 5…Bg4 to put pressure on d4 with the queen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 6.Bc4  threatens 7.Bxf7+ then 8.Ne5+\n 6.Be2  placeholder\n\n\n\n\n\n\n\n\n\n\n5.Bc4 a6"
   },
   {
     "objectID": "scandinavian-defense.html#what-if-2exd4",
     "href": "scandinavian-defense.html#what-if-2exd4",
-    "title": "2  Scandinavian Defense",
-    "section": "2.3 What if 2exd4?",
-    "text": "2.3 What if 2exd4?\n\n2.Nc3 dxe4 3.Nxe4 Qd5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 4.Nf6 Qd8  transposes back to the mainline\nInstead of retreating, white might protect the knight with  4.Qf4 \n 4.Nd3  is also an option (note, black wins a piece if 9.Nxe5)\n 4.d3  is also an option, now black is looking for …e7-e5\n\n\n\n\n\n2. d4 (The Blackmar-Diemer Gambit)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntemp\n\n\n\n\n\n2. d3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe best response to 2. d3 is trading queens, entering a middle-game in which white can not castle"
+    "title": "3  Scandinavian Defense",
+    "section": "3.3 What if 2exd4?",
+    "text": "3.3 What if 2exd4?\n\n2.Nc3 dxe4 3.Nxe4 Qd5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 4.Nf6 Qd8  transposes back to the mainline\nInstead of retreating, white might protect the knight with  4.Qf4 \n 4.Nd3  is also an option (note, black wins a piece if 9.Nxe5)\n 4.d3  is also an option, now black is looking for …e7-e5\n\n\n\n\n\n2. d4 (The Blackmar-Diemer Gambit)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntemp\n\n\n\n\n\n2. d3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe best response to 2. d3 is trading queens, entering a middle-game in which white can not castle"
   },
   {
     "objectID": "scandinavian-defense.html#references",
     "href": "scandinavian-defense.html#references",
-    "title": "2  Scandinavian Defense",
+    "title": "3  Scandinavian Defense",
     "section": "References",
     "text": "References\n\n  Download PGN"
+  },
+  {
+    "objectID": "petrov-defense.html#introduction",
+    "href": "petrov-defense.html#introduction",
+    "title": "2  Petrov’s Defense",
+    "section": "2.1 Introduction",
+    "text": "2.1 Introduction\nPetrov’s Defense begins with 1.e4 e5 2.Nf3 Nf6. White has two main options for their third move: 3.Nxe5, the Classical Variation and 3.d4, the Steinitz Variation—here I focus on 3.Nxe5"
+  },
+  {
+    "objectID": "petrov-defense.html#references",
+    "href": "petrov-defense.html#references",
+    "title": "2  Petrov’s Defense",
+    "section": "References",
+    "text": "References\n\n  Download PGN"
+  },
+  {
+    "objectID": "white.html",
+    "href": "white.html",
+    "title": " The white pieces",
+    "section": "",
+    "text": ".sidebar-item-text>.subchapter {\n  style=\"font-style: italic !important;\"\n}"
+  },
+  {
+    "objectID": "petrov-defense.html#classical-variation-3.nxe5-d6",
+    "href": "petrov-defense.html#classical-variation-3.nxe5-d6",
+    "title": "2  Petrov’s Defense",
+    "section": "2.2 Classical Variation (3.Nxe5 d6)",
+    "text": "2.2 Classical Variation (3.Nxe5 d6)\n3…d6 is Black’s best response to 3.Nxe5, followed with 4.Nf3 Nxe4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhite’s typical response is  5.d4 , white is looking to kick Black’s advanced knight from e4 with moves like c4 and Re1\nAn alternative option for white is  5.Nc3 , looking for Be3, Qd2, and 0-0-0 with a kingside attack\n\nIf  5…Bf5 , Black loses a piece"
+  },
+  {
+    "objectID": "petrov-defense.html#stafford-gambit-3.nxe5-nc6",
+    "href": "petrov-defense.html#stafford-gambit-3.nxe5-nc6",
+    "title": "2  Petrov’s Defense",
+    "section": "2.4 Stafford Gambit (3.Nxe5 Nc6)",
+    "text": "2.4 Stafford Gambit (3.Nxe5 Nc6)\n3…Nc6 is the dubious but tricky Stafford Gambit. Once refuted, White has the advantage. The key initial moves for white are 5.d3 (defending e4) followed by 6.Be2 (developing the bishop while defending against Ng4).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAt this point, Black has two options:\n\nIf  6…h5 , calmly kick the bishop\nIf  6…Ng4 , take the knight with 7.Bxg4 then defend with the queen\n\nIn the latter, a queen trade is almost forced—Black may avoid this with  9…Qh5 \n\nThis is tricky though,  11…Bxc2  and  12…Bxc2  are both bad ideas"
+  },
+  {
+    "objectID": "petrov-defense.html#the-damiano-defense-3.nxe5-nxe4",
+    "href": "petrov-defense.html#the-damiano-defense-3.nxe5-nxe4",
+    "title": "2  Petrov’s Defense",
+    "section": "2.3 The Damiano Defense (3.Nxe5 Nxe4)",
+    "text": "2.3 The Damiano Defense (3.Nxe5 Nxe4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3…Nxe4 is bad for Black, 4.Qe2 poses quite a problem.\n\n 4…Nf6  loses the queen\n 4…d5  loses a pawn\n 4…Qe7  is “best”"
+  },
+  {
+    "objectID": "petrov-defense.html#other-responses-to-3.nxe5",
+    "href": "petrov-defense.html#other-responses-to-3.nxe5",
+    "title": "2  Petrov’s Defense",
+    "section": "2.5 Other responses to 3.Nxe5",
+    "text": "2.5 Other responses to 3.Nxe5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 3…Qe7  is mildly worse for Black"
   }
 ]

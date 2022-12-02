@@ -316,7 +316,7 @@ put_board("Knight-takes")
 :::
 
 :::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
-* <span class="variation" id = "Knight-takes-Nf6-Nh5"> 5...Nf6 6.e5 </span>, threatens to trap the knight
+* <span class="variation" id = "Knight-takes-Nf6-Nh5"> 5...Nf6 6.e5 </span> threatens to trap the knight
   * <span class="variation" id = "Knight-takes-Nf6-c5"> 6...c5 </span> is black's best option (still bad)
   * <span class="variation" id = "Knight-takes-Nf6-Ng8"> 6...Ng8 </span> also saves the knight at a severe cost
 * <span class="variation" id = "Knight-takes-c5-d5"> 5...c5 6.Qd3 d5 </span> loses the d pawn

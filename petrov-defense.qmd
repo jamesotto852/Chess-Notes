@@ -1,0 +1,283 @@
+<link rel="stylesheet" href="/scripts/chessboard/css/chessboard-1.0.0.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"  -->
+<!--       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+        
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" i
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script src="/scripts/chessboard/js/chessboard-1.0.0.js"></script>
+
+<!-- https://www.ichess.net/blog/the-scotch-opening-an-attacking-chess-opening-for-white/ -->
+<!-- https://lichess.org/study/ogcSXNKv -->
+<!-- https://en.wikipedia.org/wiki/Scotch_Game -->
+
+# Petrov's Defense
+
+```{r, file='scripts/R/r-setup.R'}
+```
+
+```{ojs, file='scripts/js/board-setup.js'}
+```
+
+```{r}
+petrov <-
+  add_game(
+    title = "intro",
+    moves = c("e4", "e5", "Nf3", "Nf6"),
+    notation = TRUE
+  ) |>
+  add_game(
+    title = "classical",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "d6", "Nf3", "Nxe4"),
+    start = 5,
+    variations = c("classical-5d4", "classical-5Nc3", "classical-5Bf5")
+  ) |>
+  add_variation(
+    title = "classical-5d4",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "d6", "Nf3", "Nxe4", "d4", "d5", "Bd3"),
+    start = 9 
+  ) |>
+  add_variation(
+    title = "classical-5Nc3",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "d6", "Nf3", "Nxe4", "Nc3", "Nxc3", "dxc3"),
+    start = 9 
+  ) |>
+  add_variation(
+    title = "classical-5Bf5",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "d6", "Nf3", "Nxe4", "Nc3", "Bf5", "Qe2"),
+    start = 10 
+  ) |>
+  add_game(
+    title = "damiano",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5", "Nxe4", "Qe2"),
+    start = 6,
+    variations = c("damiano-4Nf6", "damiano-4d5", "damiano-4Qe7")
+  ) |>
+  add_variation(
+    title = "damiano-4Nf6",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5", "Nxe4", "Qe2",
+              "Nf6", "Nc6+"),
+    start = 8 
+  ) |>
+  add_variation(
+    title = "damiano-4d5",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5", "Nxe4", "Qe2",
+              "d5", "d3", "Qe7", "dxe4", "Qxe5", "exd5"),
+    start = 8 
+  ) |>
+  add_variation(
+    title = "damiano-4Qe7",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5", "Nxe4", "Qe2",
+              "Qe7", "Qxe4", "d6", "d4", "dxe5", "dxe5", "Nc6", "Nc3"),
+    start = 8 
+  ) |>
+  add_game(
+    title = "stafford",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "Nc6", "Nxc6", "dxc6", "d3", "Bc5", "Be2"),
+    start = 6,
+    variations = c("stafford-6h5", "stafford-6Ng4", "stafford-9Qh5", "stafford-11Bxc2", "stafford-12Bxc2")
+  ) |>
+  add_variation(
+    title = "stafford-6h5",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "Nc6", "Nxc6", "dxc6", "d3", "Bc5", "Be2",
+              "h5", "c3", "Ng4", "d4", "Bd6", "e5+"),
+    start = 12 
+  ) |>
+  add_variation(
+    title = "stafford-6Ng4",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "Nc6", "Nxc6", "dxc6", "d3", "Bc5", "Be2",
+              "Ng4", "Bxg4", "Qh4", "Qf3", "Bxg4", "Qg3", "Qxg3", "hxg3"),
+    start = 12 
+  ) |>
+  add_variation(
+    title = "stafford-9Qh5",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "Nc6", "Nxc6", "dxc6", "d3", "Bc5", "Be2",
+              "Ng4", "Bxg4", "Qh4", "Qf3", "Bxg4", "Qg3",
+              "Qh5", "h3", "Bd1", "Nc3", "Bb4", "Bd2", "Bxc3", "Rxd1", "Bxb2", "Qxc7"),
+    start = 18 
+  ) |>
+  add_variation(
+    title = "stafford-11Bxc2",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "Nc6", "Nxc6", "dxc6", "d3", "Bc5", "Be2",
+              "Ng4", "Bxg4", "Qh4", "Qf3", "Bxg4", "Qg3",
+              "Qh5", "h3", "Bd1", "Nc3", 
+              "Bxc2", "Kd2"),
+    start = 22 
+  ) |>
+  add_variation(
+    title = "stafford-12Bxc2",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "Nc6", "Nxc6", "dxc6", "d3", "Bc5", "Be2",
+              "Ng4", "Bxg4", "Qh4", "Qf3", "Bxg4", "Qg3",
+              "Qh5", "h3", "Bd1", "Nc3", "Bb4", "Bd2", 
+              "Bxc2", "Rc1"),
+    start = 24
+  ) |>
+  add_game(
+    title = "other",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5"),
+    start = 6,
+    variations = c("other-3Qe7")
+  ) |>
+  add_variation(
+    title = "other-3Qe7",
+    moves = c("e4", "e5", "Nf3", "Nf6", "Nxe5",
+              "Qe7", "d4", "d6", "Nf3", "Qxe4+", "Be2"),
+    start = 6 
+  ) |>
+  clean_chess_df() |>
+  write_png("Petrov")
+
+ojs_define(petrov_t = petrov)
+```
+
+```{ojs}
+petrov = transpose(petrov_t)
+```
+
+```{ojs}
+petrov.filter(d => d.type === 'main')
+  .map(d => board_setup(petrov, d.title))
+```
+
+## Introduction
+
+Petrov's Defense begins with 1.e4 e5 2.Nf3 Nf6.
+White has two main options for their third move:
+3.Nxe5, the Classical Variation and 3.d4, the Steinitz Variation---here I focus on 3.Nxe5
+
+```{r}
+#| output: asis
+put_board("intro")
+```
+
+## Classical Variation (3.Nxe5 d6)
+
+3...d6 is Black's best response to 3.Nxe5, followed with 4.Nf3 Nxe4
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("classical")
+# pgn_to_vec("d5 5.d3 Qe7 6.dxe4 Qxe5 7.exd5")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+
+* White's typical response is <span class="variation" id="classical-5d4"> 5.d4 </span>, white is looking to kick Black's advanced knight from e4 with moves like c4 and Re1
+* An alternative option for white is <span class="variation" id = "classical-5Nc3"> 5.Nc3 </span>, looking for Be3, Qd2, and 0-0-0 with a kingside attack
+  * If <span class="variation" id="classical-5Bf5"> 5...Bf5 </span>, Black loses a piece
+:::
+
+::::
+
+
+## The Damiano Defense (3.Nxe5 Nxe4)
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("damiano")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+
+* 3...Nxe4 is bad for Black, 4.Qe2 poses quite a problem.
+  * <span class ="variation" id="damiano-4Nf6"> 4...Nf6 </span> loses the queen
+  * <span class ="variation" id="damiano-4d5"> 4...d5 </span> loses a pawn
+  * <span class ="variation" id="damiano-4Qe7"> 4...Qe7 </span> is "best"
+:::
+
+::::
+
+
+
+<!-- - 4...Nf6 5.Nc6+ wins the queen -->
+<!-- - 4...d5 5.d3 Qe7 6.dxe4 Qxe5 7.exd5 loses a pawn -->
+<!-- - 4...Qe7 5.Qxe4 d6 6.d4 dxe5 7.dxe5 Nc6 8.Nc3 is "best" -->
+
+## Stafford Gambit (3.Nxe5 Nc6)
+
+3...Nc6 is the dubious but tricky Stafford Gambit.
+Once refuted, White has the advantage.
+The key initial moves for white are 5.d3 (defending e4) followed by 6.Be2 (developing the bishop while defending against Ng4).
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("stafford")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+
+* At this point, Black has two options:
+  * If <span class="variation" id="stafford-6h5"> 6...h5 </span>, calmly kick the bishop 
+  * If <span class="variation" id="stafford-6Ng4"> 6...Ng4 </span>, take the knight with 7.Bxg4 then defend with the queen
+
+* In the latter, a queen trade is almost forced---Black may avoid this with <span class="variation" id="stafford-9Qh5"> 9...Qh5 </span>
+  * This is tricky though, <span class="variation" id="stafford-11Bxc2"> 11...Bxc2 </span> and <span class="variation" id="stafford-12Bxc2"> 12...Bxc2 </span> are both bad ideas
+:::
+
+::::
+
+<!-- https://lichess.org/study/dcgcdxrS -->
+
+## Other responses to 3.Nxe5
+
+::::{.columns}
+
+:::{.column width='45%'}
+```{r}
+#| output: asis
+put_board("other")
+```
+:::
+
+:::{.column width='55%' style='margin-top: 10px; margin-left: 5px'}
+
+* <span class="variation" id="other-3Qe7"> 3...Qe7 </span> is mildly worse for Black
+:::
+
+::::
+
+## References {.unnumbered}
+
+<button class="btn" style="width: unset;">
+<a href="pgn-files/Scotch.pgn" download="Petrov.pgn">
+<i class="fa fa-download"></i> Download PGN
+</a>
+</button>
+
+
+
+
+
+
